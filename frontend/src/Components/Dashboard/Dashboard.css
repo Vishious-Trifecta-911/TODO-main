@@ -1,0 +1,87 @@
+.dahsboardMainBox {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: flex-start;
+  overflow: hidden;
+}
+
+.loaderDot {
+  width: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.loaderDot .dot {
+  width: 15px;
+  height: 15px;
+  border-radius: 20%;
+  margin: 5px;
+  background-color: rgb(220, 233, 235);
+  box-shadow: rgba(14, 30, 37, 0.12) 0px 2px 4px 0px,
+    rgba(14, 30, 37, 0.32) 0px 2px 16px 0px;
+}
+
+.loaderDot .dot:nth-child(1) {
+  opacity: 0.2;
+  animation: blink0 1.5s linear infinite;
+}
+
+.loaderDot .dot:nth-child(2) {
+  opacity: 0.7;
+  animation: blink1 1.5s linear infinite;
+}
+
+.loaderDot .dot:nth-child(3) {
+  opacity: 1;
+  animation: blink2 1.5s linear infinite;
+}
+
+@keyframes blink0 {
+  0% {
+    opacity: 0.2;
+  }
+  50% {
+    opacity: 0.7;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes blink1 {
+  0% {
+    opacity: 0.7;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0.2;
+  }
+}
+
+@keyframes blink2 {
+  0% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.2;
+  }
+  100% {
+    opacity: 0.7;
+  }
+}
+
+@media only screen and (max-width: 1000px) {
+  .dahsboardMainBox {
+    width: 100%;
+    height: fit-content;
+    overflow-y: auto;
+    overflow-x: hidden;
+    align-items: center;
+    flex-direction: column;
+  }
+}
